@@ -472,3 +472,32 @@ List<Pet> pets =
 #endregion
 
 Console.WriteLine($"count of pets: {pets.Count}");
+
+//összegzés
+// ?: kommunlatíven hány éven keresztül boldogítottak minket a kisállataink?
+var osszEletkor = pets.Sum(p => p.Age);
+Console.WriteLine($"az állatkák összéletkora: {osszEletkor:0.00} év");
+
+//átlagszámítás
+// ?: mennyi a kisállatok átlagéletkora?
+var atlagElletkor = pets.Average(p => p.Age);
+Console.WriteLine($"az állatok átlagéletkora: {atlagElletkor:0.0} év");
+
+//megszámlálás
+// ? hány macska van a listában?
+var macskakSzama = pets.Count(p => p.Species == "Cat");
+Console.WriteLine($"macskák száma: {macskakSzama} db");
+
+//? hány halott kutya van a listában?
+var halottKutyakSzama = pets.Count(p => !p.IsAlive && p.Species == "Dog");
+Console.WriteLine($"összesen {halottKutyakSzama} kutyus nincs már velünk :(");
+
+//szélsőérték
+// min/max ===> ÉRTÉKET ad vissza
+// minby/maxby ===> az értékhez tartozó PÉLDÁNYT adja vissza
+// ? mikor született a legöregebb allat
+var elsoAllatSzulinapja = pets.Min(p => p.Born);
+Console.WriteLine($"legöregebb allat szülinapja: {elsoAllatSzulinapja:D}");
+
+var legtobbLabuAllat = pets.MaxBy(p => p.Legs);
+Console.WriteLine($"legtöbb lábú állat: {legtobbLabuAllat}");

@@ -14,5 +14,5 @@
         $"\n\tName: {Name} {(IsAlive ? "" : "(\u271D)")}\n" +
         $"\tOwner: {Owner}\n" +
         $"\tRace: {Species} ({Breed})\n" +
-        $"\tAge: {Age}\n";
+        $"\tAge: {Age} yrs old\n";
 }
