@@ -341,9 +341,26 @@ List<Pet> pets =
         IsAlive = true,
         Legs = 4,
     },
-
 ];
+#endregion
 
+#region progtetelek
+// - sorozatszámítás - (összegzés) -> (átlagszámítás)
+// - megszámlálás
+// - szélsőérték meghatározás
+
+// - lineáris keresés
+// - kiválasztás (linker 'túlcsordulás-ellenőrzés nélkül))
+// - eldöntés (linker, csak bool returnnel)
+
+// - kiválogatás
+// - csoportosítás
+
+// - unió
+// - metszet
+// - diferenciál
 #endregion
 
 Console.WriteLine($"count of pets: {pets.Count}");
+
+
