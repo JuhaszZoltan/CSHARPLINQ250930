@@ -490,7 +490,7 @@ Console.WriteLine($"macskák száma: {macskakSzama} db");
 
 //? hány halott kutya van a listában?
 var halottKutyakSzama = pets.Count(p => !p.IsAlive && p.Species == "Dog");
-Console.WriteLine($"összesen {halottKutyakSzama} kutyus nincs már velünk :(");
+Console.WriteLine($"{halottKutyakSzama} kutyus nincs már velünk :(");
 
 //szélsőérték
 // min/max ===> ÉRTÉKET ad vissza
