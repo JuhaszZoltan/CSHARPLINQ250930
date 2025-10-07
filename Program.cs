@@ -3,6 +3,7 @@ List<Pet> pets =
 [
     new()
     {
+        Name = "Mindegy",
         Owner = "Varga Jázmin",
         Species = "Dog",
         Breed = "Vizsla",
@@ -12,6 +13,7 @@ List<Pet> pets =
     },
     new()
     {
+        Name = "Kapor",
         Owner = "Szász Kristóf",
         Species = "Cat",
         Breed = "Persian",
@@ -21,6 +23,7 @@ List<Pet> pets =
     },
     new()
     {
+        Name = "Betti",
         Owner = "Szalonnás István",
         Species = "Dog",
         Breed = "Westie",
@@ -30,6 +33,7 @@ List<Pet> pets =
     },
     new()
     {
+        Name = "Szász",
         Owner = "Sajti Viktor",
         Species = "Dog",
         Breed = "Bishon havanese",
@@ -39,6 +43,7 @@ List<Pet> pets =
     },
     new()
     {
+        Name = "Bogyó",
         Owner = "Nagy Bálint",
         Species = "Dog",
         Breed = "Chiwawa",
@@ -48,6 +53,7 @@ List<Pet> pets =
     },
     new()
     {
+        Name = "Ferenc",
         Owner = "Kovács Ádám",
         Species = "Fish",
         Breed = "Sailfish",
@@ -57,6 +63,7 @@ List<Pet> pets =
     },
     new()
     {
+        Name = "Ferenc",
         Owner = "Késmárki Gábor",
         Species = "Spider",
         Breed = "Tarantulla",
@@ -66,6 +73,7 @@ List<Pet> pets =
     },
     new()
     {
+        Name = "Kígyó",
         Owner = "Herda Laura",
         Species = "Snake",
         Breed = "Corn snake",
@@ -75,6 +83,7 @@ List<Pet> pets =
     },
     new()
     {
+        Name = "Dániel",
         Owner = "Gaál Ámon",
         Species = "Dog",
         Breed = "Staffordshire terrier",
@@ -84,6 +93,7 @@ List<Pet> pets =
     },
     new()
     {
+        Name = "Kutya",
         Owner = "Ács Dániel",
         Species = "Kangaroo",
         Breed = "African kangaroo",
