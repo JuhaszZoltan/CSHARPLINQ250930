@@ -341,6 +341,106 @@ List<Pet> pets =
         IsAlive = true,
         Legs = 4,
     },
+    new()
+    {
+        Owner = "Dobos Martin Zsolt",
+        Name = "Dina",
+        Species = "Dog",
+        Breed = "Mixed breed",
+        Born = DateTime.Parse("2016-04-10"),
+        IsAlive = true,
+        Legs = 4,
+    },
+    new()
+    {
+        Owner = "Kardos András",
+        Name = "Mia",
+        Species = "Cat",
+        Breed = "House cat",
+        Born = DateTime.Parse("2025-04-11"),
+        IsAlive = true,
+        Legs = 4,
+    },
+    new()
+    {
+        Owner = "Mogyorósi Gábor Zsolt",
+        Name = "Tiara",
+        Species = "Cat",
+        Breed = "House cat",
+        Born = DateTime.Parse("2020-04-21"),
+        IsAlive = true,
+        Legs = 4,
+    },
+    new()
+    {
+        Owner = "Mogyorósi Gábor Zsolt",
+        Name = "Tigris",
+        Species = "Cat",
+        Breed = "House cat",
+        Born = DateTime.Parse("2020-04-21"),
+        IsAlive = true,
+        Legs = 4,
+    },
+    new()
+    {
+        Owner = "Mogyorósi Gábor Zsolt",
+        Name = "Lizzy",
+        Species = "Dog",
+        Breed = "Labrador",
+        Born = DateTime.Parse("2018-01-12"),
+        IsAlive = true,
+        Legs = 4,
+    },
+    new()
+    {
+        Owner = "Pádár Sándor Bendegúz",
+        Name = "Mirci",
+        Species = "Cat",
+        Breed = "House cat",
+        Born = DateTime.Parse("2024-11-01"),
+        IsAlive = true,
+        Legs = 4,
+    },
+    new()
+    {
+        Owner = "Péter Dániel",
+        Name = "Onyx",
+        Species = "Dog",
+        Breed = "Golden retriver",
+        Born = DateTime.Parse("2011-09-11"),
+        IsAlive = true,
+        Legs = 4,
+    },
+    new()
+    {
+        Owner = "Pető Tamás",
+        Name = "Zsolti",
+        Species = "Cat",
+        Breed = "House cat",
+        Born = DateTime.Parse("2025-10-06"),
+        IsAlive = true,
+        Legs = 3,
+    },
+    new()
+    {
+        Owner = "Tagscherer Balázs",
+        Name = "Zeusz",
+        Species = "Dog",
+        Breed = "Mixed breed",
+        Born = DateTime.Parse("2023-05-15"),
+        IsAlive = true,
+        Legs = 4,
+    },
+    new()
+    {
+        Owner = "Rácz Attila",
+        Name = "Kodi",
+        Species = "Cat",
+        Breed = "House cat",
+        Born = DateTime.Parse("2018-06-17"),
+        IsAlive = true,
+        Legs = 4,
+    },
 ];
 #endregion
 
