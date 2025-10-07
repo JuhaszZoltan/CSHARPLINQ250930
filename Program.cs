@@ -291,6 +291,57 @@ List<Pet> pets =
         IsAlive = false,
         Legs = 4,
     },
+    new()
+    {
+        Name = "Bella",
+        Owner = "Barabás Zsombor",
+        Species = "Dog",
+        Breed = "German sepherd",
+        Born = DateTime.Parse("2020-04-12"),
+        IsAlive = true,
+        Legs = 4,
+    },
+    new()
+    {
+        Name = "Máté",
+        Owner = "Chamie Mohamed",
+        Species = "Rabbit",
+        Breed = "Angora rabbit",
+        Born = DateTime.Parse("2025-10-07"),
+        IsAlive = false,
+        Legs = 4,
+    },
+    new()
+    {
+        Name = "Borka",
+        Owner = "Csiha Márk",
+        Species = "Parrot",
+        Breed = "Amazon parrot",
+        Born = DateTime.Parse("2024-07-30"),
+        IsAlive = false,
+        Legs = 2,
+    },
+    new()
+    {
+        Name = "Bobby",
+        Owner = "Engert Dániel",
+        Species = "Dog",
+        Breed = "Stafford shield terrier",
+        Born = DateTime.Parse("2010-06-19"),
+        IsAlive = false,
+        Legs = 4,
+    },
+    new()
+    {
+        Owner = "Fábián Enikő Jázmin",
+        Name = "Nyunyi",
+        Species = "Rabbit",
+        Breed = "Netherland dwarf rabbit",
+        Born = DateTime.Parse("2023-09-15"),
+        IsAlive = true,
+        Legs = 4,
+    },
+
 ];
 
 #endregion
