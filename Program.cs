@@ -233,7 +233,7 @@ List<Pet> pets =
     },
     new()
     {
-        Name = "Fifike",
+        Name = "Bajúsz",
         Owner = "Holzinger Vanessza",
         Species = "Cat",
         Breed = "Bengalian",
@@ -447,14 +447,14 @@ List<Pet> pets =
 #region progtetelek
 // - sorozatszámítás - (összegzés) -> (átlagszámítás)
 // - megszámlálás
-// - szélsőérték meghatározás
+// - szélsőérték meghatározás (max, min)
 
 // - lineáris keresés
-// - kiválasztás (linker 'túlcsordulás-ellenőrzés nélkül))
+// - kiválasztás (linker csak túlcsordulás-ellenőrzés nélkül)
 // - eldöntés (linker, csak bool returnnel)
 
 // - kiválogatás
-// - csoportosítás
+// - csoportosítás (szétválogatás)
 
 // - unió
 // - metszet
@@ -462,5 +462,3 @@ List<Pet> pets =
 #endregion
 
 Console.WriteLine($"count of pets: {pets.Count}");
-
-
