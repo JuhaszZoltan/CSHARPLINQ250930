@@ -306,7 +306,7 @@ List<Pet> pets =
         Name = "Bella",
         Owner = "Barabás Zsombor",
         Species = "Dog",
-        Breed = "German sepherd",
+        Breed = "German shepherd",
         Born = DateTime.Parse("2020-04-12"),
         IsAlive = true,
         Legs = 4,
@@ -495,9 +495,15 @@ Console.WriteLine($"{halottKutyakSzama} kutyus nincs már velünk :(");
 //szélsőérték
 // min/max ===> ÉRTÉKET ad vissza
 // minby/maxby ===> az értékhez tartozó PÉLDÁNYT adja vissza
+
 // ? mikor született a legöregebb allat
 var elsoAllatSzulinapja = pets.Min(p => p.Born);
 Console.WriteLine($"legöregebb allat szülinapja: {elsoAllatSzulinapja:D}");
 
+// ? melyik állatnak van a legtöbb állat (-> példányt ad vissza)
 var legtobbLabuAllat = pets.MaxBy(p => p.Legs);
 Console.WriteLine($"legtöbb lábú állat: {legtobbLabuAllat}");
+
+// --------------------------
+
+
