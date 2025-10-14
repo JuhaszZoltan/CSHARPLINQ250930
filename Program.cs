@@ -505,11 +505,13 @@ Console.WriteLine($"legöregebb allat szülinapja: {elsoAllatSzulinapja:D}");
 var legtobbLabuAllat = pets.MaxBy(p => p.Legs);
 Console.WriteLine($"legtöbb lábú állat: {legtobbLabuAllat}");
 
-// ? melyik a listában az első olyan állat, ami nem [kutya, macska]?
+// ----------------------------------------------------------------------------------------------------
 
 // HA van a <predicate>nek megfelelő találat, akkor visszaadja a listából az
 // rendre az ELSŐ ennek megfelelő PÉLDÁNYT
 // HA nincs, akkor 'Sequence contains no matching element' exceptiont dob
+
+// ? melyik a listában az első olyan állat, ami nem [kutya, macska]?
 var elsoNemKutyMacs = pets.First(p => p.Species != "Cat" && p.Species != "Dog");
 Console.WriteLine($"az első 'különleges fajú' állat: {elsoNemKutyMacs}");
 
@@ -548,7 +550,6 @@ Console.WriteLine(vane3LabuAllat
     ? "van háromlábú állat" 
     : "nincs háromlábú állat");
 
-
 // ? MINDEN állatnak a kollekcióban van gazdája
 var mindenkinekVanGazdaja = pets.All(p => p.Owner != null);
 Console.WriteLine(mindenkinekVanGazdaja
@@ -573,3 +574,5 @@ Console.WriteLine(belaNevuAllat is null
 // indexof() -> nem linq, adott példány idexét adja vissza adott kollekcióban
 // contains() -> nem linq, sub-sekvenciákat is lehet vele vizsgálni
 // findindex() -> nem linq, "szó szerinti" megvalósítása a LinKer alg.
+
+// ----------------------------------------------------------------------------------------------------
