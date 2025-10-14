@@ -1,5 +1,4 @@
 ﻿#region pet list
-using System.Security.Principal;
 
 List<Pet> pets =
 [
@@ -506,4 +505,71 @@ Console.WriteLine($"legöregebb allat szülinapja: {elsoAllatSzulinapja:D}");
 var legtobbLabuAllat = pets.MaxBy(p => p.Legs);
 Console.WriteLine($"legtöbb lábú állat: {legtobbLabuAllat}");
 
-// --------------------------
+// ? melyik a listában az első olyan állat, ami nem [kutya, macska]?
+
+// HA van a <predicate>nek megfelelő találat, akkor visszaadja a listából az
+// rendre az ELSŐ ennek megfelelő PÉLDÁNYT
+// HA nincs, akkor 'Sequence contains no matching element' exceptiont dob
+var elsoNemKutyMacs = pets.First(p => p.Species != "Cat" && p.Species != "Dog");
+Console.WriteLine($"az első 'különleges fajú' állat: {elsoNemKutyMacs}");
+
+//// HA van a <predicate>nek megfelelő találat, akkor visszaadja a listából az
+// ELSŐ ennek megfelelő PÉLDÁNYT
+// HA nincs, akkor a kollekció elemei típusának megfelelően 'default' eredményt dob, ami:
+// REFERENCE (class) típusok esetén null
+// VALUE (struct) típusok esetén "definiált default"
+// (ami ÁLTALÁBAN a típusnak megfelelő ZÉRÓ érték)
+var elsoXenomorf = pets.FirstOrDefault(p => p.Species == "Xenomorf");
+if (elsoXenomorf is null) Console.WriteLine("senkinek nincs xenomorfja");
+else Console.WriteLine($"Az első xenomorf: {elsoXenomorf}");
+
+//van még: .last(pred) és .lastordefault(pred)
+
+//HA EGYETLEN EGY találat van, akkor visszaadja a <pred>nek megfelelő példányt
+//HA TÖBB TALÁLAT is lenne, akkor 'Sequence contains more than one matching element' exc.
+//HA NINCS egyetlen találat sem, akkor 'Sequence contains no matching element' exc.
+var chamieAllata = pets.Single(p => p.Owner.Contains("Chamie"));
+Console.WriteLine($"{chamieAllata.Owner}'s {chamieAllata.Species}: {chamieAllata}");
+
+//HA EGYETLEN EGY találat van, akkor visszaadja a <pred>nek megfelelő példányt
+//HA TÖBB TALÁLAT is lenne, akkor 'Sequence contains more than one matching element' exc.
+//HA NINCS egyetlen találat sem, akkor típushoz tartozó default értéket ad vissza (nem exceptiont):
+// reference (class) -> null
+// value (struct) -> zéró
+var egyetlenNemetjuhasz = pets.SingleOrDefault(p => p.Breed == "German shepherd");
+Console.WriteLine($"az egyetlen németjuhász: {egyetlenNemetjuhasz}");
+
+// ? van-e pók a kisállatok között (akár egy, akár több)
+var vanPok = pets.Any(p => p.Species == "Spider");
+Console.WriteLine($"{(vanPok ? "van" : "nincs")} pók");
+
+var vane3LabuAllat = pets.Any(p => p.Legs == 3);
+Console.WriteLine(vane3LabuAllat 
+    ? "van háromlábú állat" 
+    : "nincs háromlábú állat");
+
+
+// ? MINDEN állatnak a kollekcióban van gazdája
+var mindenkinekVanGazdaja = pets.All(p => p.Owner != null);
+Console.WriteLine(mindenkinekVanGazdaja
+    ? "mindenkinek van gazdája"
+    : "van, akinek nincs gazdája");
+
+var mindenkiLegalabbEgyEves = pets.All(p => p.Age >= 1);
+Console.WriteLine(mindenkiLegalabbEgyEves
+    ? "minden állat legalább egy esztendős"
+    : "van olyan állat, ami még nincs egy esztendős");
+
+// NEM LINQ, ua. mint az any()
+var vanJZnekAllata = pets.Exists(p => p.Owner == "Juhász Zoltán");
+Console.WriteLine(vanJZnekAllata ? "van JZnek állata" : "JZnek nincs állata");
+
+// NEM LINQ, ua., mint a firstordefault()
+var belaNevuAllat = pets.Find(p => p.Name == "Béla");
+Console.WriteLine(belaNevuAllat is null
+    ? "nincs Béla nefű állat"
+    : $"van béla nevű állat: {belaNevuAllat}");
+
+// indexof() -> nem linq, adott példány idexét adja vissza adott kollekcióban
+// contains() -> nem linq, sub-sekvenciákat is lehet vele vizsgálni
+// findindex() -> nem linq, "szó szerinti" megvalósítása a LinKer alg.
