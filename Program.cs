@@ -1,4 +1,6 @@
 ﻿#region pet list
+using System.Security.Principal;
+
 List<Pet> pets =
 [
     new()
@@ -505,5 +507,3 @@ var legtobbLabuAllat = pets.MaxBy(p => p.Legs);
 Console.WriteLine($"legtöbb lábú állat: {legtobbLabuAllat}");
 
 // --------------------------
-
-
