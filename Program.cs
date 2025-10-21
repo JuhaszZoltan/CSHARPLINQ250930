@@ -587,6 +587,9 @@ Console.WriteLine(belaNevuAllat is null
 
 // összes állat neve
 var allatokNevei = pets.Select(p => p.Name);
+//var allatNevKor = pets.Select(p => new{ p.Name, p.Age });
+
+// foreach (var pet in pets) Console.WriteLine(pet.Name);
 
 //az összes faj ismétlés nélkül
 //.distinct() && .distinctby()
@@ -624,3 +627,33 @@ Console.WriteLine("\n");
 var horik = pets.Where(p => p.Species == "Hamster");
 
 foreach (var item in horik) Console.WriteLine(item);
+
+
+var om = pets
+    .Where(p => p.Species == "Cat")
+    .OrderByDescending(p => p.Age)
+    .ToList()[..5];
+
+Console.WriteLine("az 5 legöregebb cica:");
+foreach (var item in om) Console.WriteLine(item);
+
+var grps1 = pets
+    .GroupBy(p => p.Species)
+    .Where(g => g.Count() > 1)
+    .OrderBy(g => g.Key)
+    .ToDictionary(g => g.Key, g => g.Count());
+
+//foreach (var grp in grps1)
+//{
+//    Console.WriteLine($"kulcs: {grp.Key}");
+//    foreach (var pet in grp)
+//    {
+//        Console.WriteLine($"\t{pet}");
+//    }
+//}
+
+//hány állat van fajonként, azon fajok közül, amikből legalább 2 példány van:
+foreach (var kvp in grps1)
+{
+    Console.WriteLine($"{kvp.Key}: {kvp.Value}");
+}
