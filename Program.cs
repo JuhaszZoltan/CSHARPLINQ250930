@@ -467,9 +467,16 @@ List<Pet> pets =
 // - kiválogatás
 // - csoportosítás (szétválogatás)
 
-// - unió
-// - metszet
-// - diferenciál
+// "halmaz" tételek
+// - unió        - .unioin()    / .unionby()
+// - metszet     - .intersect() / .intersectby()
+// - diferenciál - .except()    / .exceptby()
+
+// 'egyéb' nevezetes algoritmusok:
+// - projekció
+// - rendezés
+// - distinkció
+
 #endregion
 
 Console.WriteLine($"count of pets: {pets.Count}");
@@ -569,7 +576,7 @@ Console.WriteLine(vanJZnekAllata ? "van JZnek állata" : "JZnek nincs állata");
 var belaNevuAllat = pets.Find(p => p.Name == "Béla");
 Console.WriteLine(belaNevuAllat is null
     ? "nincs Béla nefű állat"
-    : $"van béla nevű állat: {belaNevuAllat}");
+    : $"van Béla nevű állat: {belaNevuAllat}");
 
 // indexof() -> nem linq, adott példány idexét adja vissza adott kollekcióban
 // contains() -> nem linq, sub-sekvenciákat is lehet vele vizsgálni
