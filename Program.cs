@@ -585,3 +585,42 @@ Console.WriteLine(belaNevuAllat is null
 
 //----------------------------------------------------------------------------------------------------
 
+// összes állat neve
+var allatokNevei = pets.Select(p => p.Name);
+
+//az összes faj ismétlés nélkül
+//.distinct() && .distinctby()
+var osszesfaj = pets
+    .Select(p => p.Species)
+    .Distinct();
+
+foreach (var faj in osszesfaj) Console.Write($"{faj}, ");
+Console.WriteLine("\n");
+
+//var of2 = pets.DistinctBy(p => p.Species);
+//foreach (var item in of2) Console.WriteLine(item.Species);
+
+//állatok faj, majd név szerint rendezve:
+var rendezett = pets
+    .OrderBy(p => p.Species)
+    .ThenBy(p => p.Name);
+foreach (var item in rendezett) Console.WriteLine(item);
+
+// orderby() ... thenby() vagy thenbydescanding()
+// orderbydescending()...
+// order() -> 
+
+// sort() (nem LINQ) <<< HELYEN rendez!!!
+
+// fajok, ismétlés nélkül, abc rendben:
+var finabc = pets
+    .Select(p => p.Species)
+    .Distinct()
+    .Order();
+foreach (var faj in finabc) Console.Write($"{faj}, ");
+Console.WriteLine("\n");
+
+// összes hörcsög:
+var horik = pets.Where(p => p.Species == "Hamster");
+
+foreach (var item in horik) Console.WriteLine(item);
