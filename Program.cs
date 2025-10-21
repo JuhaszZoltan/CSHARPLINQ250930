@@ -473,6 +473,7 @@ List<Pet> pets =
 // - diferenciál - .except()    / .exceptby()
 
 // 'egyéb' nevezetes algoritmusok:
+// - másolás (collection generic: .copy())
 // - projekció
 // - rendezés
 // - distinkció
@@ -582,4 +583,5 @@ Console.WriteLine(belaNevuAllat is null
 // contains() -> nem linq, sub-sekvenciákat is lehet vele vizsgálni
 // findindex() -> nem linq, "szó szerinti" megvalósítása a LinKer alg.
 
-// ----------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------
+
