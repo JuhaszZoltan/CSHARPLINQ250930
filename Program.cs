@@ -1,5 +1,7 @@
 ﻿#region pet list
 
+using System.Diagnostics.CodeAnalysis;
+
 List<Pet> pets =
 [
     new()
